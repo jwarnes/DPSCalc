@@ -16,29 +16,18 @@ namespace DPS_Calc
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            int necessaryDPS;
+            int bossHP = Convert.ToInt16(this.bossHP.Text) * 1000000;
+            int numDPS = (int)this.numDPS.Value;
+            int tankDPS = Convert.ToInt16(this.tankDPS.Text) * 1000;
+            int enrage = Convert.ToInt16(this.textTTK.Text);
+            float debuff = this.debuff.Checked ? 0.3f : 0.0f;
 
-        }
+            necessaryDPS = dpscalc.calculateNecessaryDPS(bossHP, numDPS, tankDPS, enrage, debuff);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
+            this.lblOutput.Text = "Required DPS per member: "+necessaryDPS.ToString();
         }
     }
 }

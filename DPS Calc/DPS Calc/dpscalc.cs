@@ -9,12 +9,22 @@ namespace DPS_Calc
     {
         public static int calculateNecessaryDPS(int bossHP, int numDPS, int tankDPS, int enrage, float debuff)
         {
+            float necessaryDPS;
+
+            //adjust the total health pool by the debuff
+            bossHP = (int)((float)bossHP*(1.0f - debuff));
+
+            //determine the amount of damage per second needed to defeat the boss before the enrage timer
+            float raidDPS = bossHP / enrage;
+
+            //subtract estimated tank contribution
+            raidDPS -= tankDPS;
+
+            //divide the remaining health pool/second by the number of DPS players and return
+            necessaryDPS = raidDPS / numDPS;
+            return (int)necessaryDPS;
         }
 
-        private int convertToMillion(string bossHP)
-        {
-            return 
-        }
 
     }
 }
