@@ -48,30 +48,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 17);
+            this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Boss Health (in millions)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 44);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(7, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 17);
+            this.label2.Size = new System.Drawing.Size(126, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tank DPS (in thousands)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 118);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(4, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 17);
+            this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Number of DPS";
             // 
@@ -80,36 +77,32 @@
             this.debuff.AutoSize = true;
             this.debuff.Checked = true;
             this.debuff.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.debuff.Location = new System.Drawing.Point(19, 76);
-            this.debuff.Margin = new System.Windows.Forms.Padding(4);
+            this.debuff.Location = new System.Drawing.Point(14, 62);
             this.debuff.Name = "debuff";
-            this.debuff.Size = new System.Drawing.Size(114, 21);
+            this.debuff.Size = new System.Drawing.Size(87, 17);
             this.debuff.TabIndex = 4;
             this.debuff.Text = "Debuff (30%)";
             this.debuff.UseVisualStyleBackColor = true;
             // 
             // bossHP
             // 
-            this.bossHP.Location = new System.Drawing.Point(181, 7);
-            this.bossHP.Margin = new System.Windows.Forms.Padding(4);
+            this.bossHP.Location = new System.Drawing.Point(136, 6);
             this.bossHP.Name = "bossHP";
-            this.bossHP.Size = new System.Drawing.Size(105, 22);
+            this.bossHP.Size = new System.Drawing.Size(80, 20);
             this.bossHP.TabIndex = 0;
             this.bossHP.Text = "85";
             // 
             // tankDPS
             // 
-            this.tankDPS.Location = new System.Drawing.Point(181, 41);
-            this.tankDPS.Margin = new System.Windows.Forms.Padding(4);
+            this.tankDPS.Location = new System.Drawing.Point(136, 33);
             this.tankDPS.Name = "tankDPS";
-            this.tankDPS.Size = new System.Drawing.Size(105, 22);
+            this.tankDPS.Size = new System.Drawing.Size(80, 20);
             this.tankDPS.TabIndex = 1;
             this.tankDPS.Text = "34";
             // 
             // numDPS
             // 
-            this.numDPS.Location = new System.Drawing.Point(125, 116);
-            this.numDPS.Margin = new System.Windows.Forms.Padding(4);
+            this.numDPS.Location = new System.Drawing.Point(94, 94);
             this.numDPS.Maximum = new decimal(new int[] {
             10,
             0,
@@ -121,7 +114,7 @@
             0,
             0});
             this.numDPS.Name = "numDPS";
-            this.numDPS.Size = new System.Drawing.Size(45, 22);
+            this.numDPS.Size = new System.Drawing.Size(34, 20);
             this.numDPS.TabIndex = 3;
             this.numDPS.Value = new decimal(new int[] {
             6,
@@ -132,10 +125,9 @@
             // lblOutput
             // 
             this.lblOutput.BackColor = System.Drawing.Color.Transparent;
-            this.lblOutput.Location = new System.Drawing.Point(9, 165);
-            this.lblOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOutput.Location = new System.Drawing.Point(7, 134);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(282, 26);
+            this.lblOutput.Size = new System.Drawing.Size(212, 21);
             this.lblOutput.TabIndex = 9;
             this.lblOutput.Text = "----";
             this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,10 +135,9 @@
             // btnCalculate
             // 
             this.btnCalculate.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCalculate.Location = new System.Drawing.Point(181, 112);
-            this.btnCalculate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCalculate.Location = new System.Drawing.Point(136, 91);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(103, 28);
+            this.btnCalculate.Size = new System.Drawing.Size(77, 23);
             this.btnCalculate.TabIndex = 5;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -154,20 +145,18 @@
             // 
             // textTTK
             // 
-            this.textTTK.Location = new System.Drawing.Point(181, 74);
-            this.textTTK.Margin = new System.Windows.Forms.Padding(4);
+            this.textTTK.Location = new System.Drawing.Point(136, 60);
             this.textTTK.Name = "textTTK";
-            this.textTTK.Size = new System.Drawing.Size(105, 22);
+            this.textTTK.Size = new System.Drawing.Size(80, 20);
             this.textTTK.TabIndex = 2;
             this.textTTK.Text = "360";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(141, 77);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(106, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 17);
+            this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "TTK";
             // 
@@ -178,25 +167,25 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(304, 198);
+            this.shapeContainer1.Size = new System.Drawing.Size(230, 167);
             this.shapeContainer1.TabIndex = 8;
             this.shapeContainer1.TabStop = false;
             // 
             // lineShape1
             // 
             this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 21;
-            this.lineShape1.X2 = 283;
-            this.lineShape1.Y1 = 163;
-            this.lineShape1.Y2 = 163;
+            this.lineShape1.X1 = 16;
+            this.lineShape1.X2 = 214;
+            this.lineShape1.Y1 = 129;
+            this.lineShape1.Y2 = 129;
             // 
             // MainForm
             // 
             this.AcceptButton = this.btnCalculate;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(304, 198);
+            this.ClientSize = new System.Drawing.Size(230, 167);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textTTK);
             this.Controls.Add(this.btnCalculate);
@@ -210,10 +199,9 @@
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.shapeContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(322, 243);
-            this.MinimumSize = new System.Drawing.Size(322, 243);
+            this.MaximumSize = new System.Drawing.Size(246, 205);
+            this.MinimumSize = new System.Drawing.Size(246, 205);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "DPS Calculator";
