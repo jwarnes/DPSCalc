@@ -18,16 +18,44 @@ namespace DPS_Calc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int necessaryDPS;
-            int bossHP = Convert.ToInt16(this.bossHP.Text) * 1000000;
-            int numDPS = (int)this.numDPS.Value;
-            int tankDPS = Convert.ToInt16(this.tankDPS.Text) * 1000;
-            int enrage = Convert.ToInt16(this.textTTK.Text);
-            float debuff = this.debuff.Checked ? 0.3f : 0.0f;
+            //validate
+            string validateMessage = this.validate();
+            if (validateMessage == "")
+            {
+                //calculate
+                int necessaryDPS;
+                int bossHP = Convert.ToInt16(this.bossHP.Text) * 1000000;
+                int numDPS = (int)this.numDPS.Value;
+                int tankDPS = Convert.ToInt16(this.tankDPS.Text) * 1000;
+                int enrage = Convert.ToInt16(this.textTTK.Text);
+                float debuff = this.debuff.Checked ? 0.3f : 0.0f;
 
-            necessaryDPS = dpscalc.calculateNecessaryDPS(bossHP, numDPS, tankDPS, enrage, debuff);
+                necessaryDPS = dpscalc.calculateNecessaryDPS(bossHP, numDPS, tankDPS, enrage, debuff);
 
-            this.lblOutput.Text = "Required DPS per member: "+necessaryDPS.ToString();
+                this.lblOutput.Text = "Required DPS per member: " + necessaryDPS.ToString();
+            }
+            else
+            {
+                MessageBox.Show(validateMessage, "Warning: You are an idiot");
+            }
+        }
+
+        private string validate()
+        {
+            string errorMessage = " ";
+
+            if (!validater.isInt(this.bossHP))
+                errorMessage = " Boss HP must be a whole number.";
+            if (!validater.isInt(this.tankDPS))
+                errorMessage += "\nTank DPS must be a whole number.";
+            if (!validater.isInt(this.textTTK))
+                errorMessage += "\nEnrage timer must be a whole number.";
+
+            //remove first character of errorMessage string
+            errorMessage = errorMessage.Remove(0, 1);
+
+            return errorMessage;
+
         }
     }
 }
