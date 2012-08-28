@@ -21,5 +21,18 @@ namespace DPS_Calc
                 return false;
             }
         }
+
+        public static bool isDecimal(TextBox textBox)
+        {
+            try
+            {
+                Convert.ToDecimal(textBox.Text);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
     }
 }
