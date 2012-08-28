@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numDPS)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +54,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Boss Health (in millions)";
+            this.label1.Text = "Boss &Health (in millions)";
             // 
             // label2
             // 
@@ -61,7 +63,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tank DPS (in thousands)";
+            this.label2.Text = "Ta&nk DPS (in thousands)";
             // 
             // label3
             // 
@@ -69,8 +71,8 @@
             this.label3.Location = new System.Drawing.Point(4, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Number of DPS";
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Number of &DPS";
             // 
             // debuff
             // 
@@ -80,8 +82,9 @@
             this.debuff.Location = new System.Drawing.Point(14, 62);
             this.debuff.Name = "debuff";
             this.debuff.Size = new System.Drawing.Size(87, 17);
-            this.debuff.TabIndex = 4;
-            this.debuff.Text = "Debuff (30%)";
+            this.debuff.TabIndex = 8;
+            this.debuff.Text = "De&buff (30%)";
+            this.toolTip1.SetToolTip(this.debuff, "Whether or not to apply the Dragon Soul debuff to the health pool.");
             this.debuff.UseVisualStyleBackColor = true;
             // 
             // bossHP
@@ -89,16 +92,20 @@
             this.bossHP.Location = new System.Drawing.Point(136, 6);
             this.bossHP.Name = "bossHP";
             this.bossHP.Size = new System.Drawing.Size(80, 20);
-            this.bossHP.TabIndex = 0;
+            this.bossHP.TabIndex = 1;
             this.bossHP.Text = "85";
+            this.toolTip1.SetToolTip(this.bossHP, "Amount of health that needs to be burned through in millions, (e.g. 85 for 85,000" +
+                    ",000)");
             // 
             // tankDPS
             // 
             this.tankDPS.Location = new System.Drawing.Point(136, 33);
             this.tankDPS.Name = "tankDPS";
             this.tankDPS.Size = new System.Drawing.Size(80, 20);
-            this.tankDPS.TabIndex = 1;
+            this.tankDPS.TabIndex = 3;
             this.tankDPS.Text = "34";
+            this.toolTip1.SetToolTip(this.tankDPS, "Estimated total tank contribution of DPS, measured in thousands (e.g. 34 for 34k)" +
+                    "");
             // 
             // numDPS
             // 
@@ -115,7 +122,8 @@
             0});
             this.numDPS.Name = "numDPS";
             this.numDPS.Size = new System.Drawing.Size(34, 20);
-            this.numDPS.TabIndex = 3;
+            this.numDPS.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.numDPS, "Number of dedicated DPS players to distribute the damage burden to.");
             this.numDPS.Value = new decimal(new int[] {
             6,
             0,
@@ -138,7 +146,7 @@
             this.btnCalculate.Location = new System.Drawing.Point(136, 91);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(77, 23);
-            this.btnCalculate.TabIndex = 5;
+            this.btnCalculate.TabIndex = 9;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.button1_Click);
@@ -148,8 +156,10 @@
             this.textTTK.Location = new System.Drawing.Point(136, 60);
             this.textTTK.Name = "textTTK";
             this.textTTK.Size = new System.Drawing.Size(80, 20);
-            this.textTTK.TabIndex = 2;
+            this.textTTK.TabIndex = 5;
             this.textTTK.Text = "360";
+            this.toolTip1.SetToolTip(this.textTTK, "Time-to-kill, or enrage timer. How long in seconds you have to burn through the h" +
+                    "ealth pool.");
             // 
             // label4
             // 
@@ -157,8 +167,8 @@
             this.label4.Location = new System.Drawing.Point(106, 63);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "TTK";
+            this.label4.TabIndex = 4;
+            this.label4.Text = "&TTK";
             // 
             // shapeContainer1
             // 
@@ -178,6 +188,14 @@
             this.lineShape1.X2 = 214;
             this.lineShape1.Y1 = 129;
             this.lineShape1.Y2 = 129;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 200;
+            this.toolTip1.AutoPopDelay = 2000;
+            this.toolTip1.InitialDelay = 80;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 40;
             // 
             // MainForm
             // 
@@ -226,6 +244,7 @@
         private System.Windows.Forms.Label label4;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
