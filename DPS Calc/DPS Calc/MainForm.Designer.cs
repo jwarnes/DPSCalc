@@ -138,7 +138,7 @@
             // lblOutput
             // 
             this.lblOutput.BackColor = System.Drawing.Color.Transparent;
-            this.lblOutput.Location = new System.Drawing.Point(9, 165);
+            this.lblOutput.Location = new System.Drawing.Point(11, 144);
             this.lblOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(283, 26);
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(304, 197);
+            this.ClientSize = new System.Drawing.Size(304, 174);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textTTK);
             this.Controls.Add(this.btnCalculate);
@@ -209,7 +209,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(322, 242);
-            this.MinimumSize = new System.Drawing.Size(322, 242);
+            this.MinimumSize = new System.Drawing.Size(322, 219);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "DPS Calculator";
