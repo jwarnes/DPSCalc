@@ -26,7 +26,7 @@ namespace DPS_Calc
                 int necessaryDPS;
                 int bossHP = (int)(Convert.ToDecimal(this.bossHP.Text) * 1000000);
                 int numDPS = (int)this.numDPS.Value;
-                int tankDPS = Convert.ToInt16(this.tankDPS.Text) * 1000;
+                decimal tankDPS = Convert.ToDecimal(this.tankDPS.Text) * 1000;
                 int enrage = Convert.ToInt16(this.textTTK.Text);
                 float debuff = this.debuff.Checked ? 0.3f : 0.0f;
 
@@ -46,8 +46,8 @@ namespace DPS_Calc
 
             if (!validater.isDecimal(this.bossHP))
                 errorMessage = " Boss HP must be a number.";
-            if (!validater.isInt(this.tankDPS))
-                errorMessage += "\nTank DPS must be a whole number.";
+            if (!validater.isDecimal(this.tankDPS))
+                errorMessage += "\nTank DPS must be a number.";
             if (!validater.isInt(this.textTTK))
                 errorMessage += "\nEnrage timer must be a whole number.";
 

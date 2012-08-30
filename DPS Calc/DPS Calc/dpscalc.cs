@@ -7,7 +7,7 @@ namespace DPS_Calc
 {
     class dpscalc
     {
-        public static int calculateNecessaryDPS(int bossHP, int numDPS, int tankDPS, int enrage, float debuff)
+        public static int calculateNecessaryDPS(int bossHP, int numDPS, decimal tankDPS, int enrage, float debuff)
         {
             float necessaryDPS;
 
@@ -18,7 +18,7 @@ namespace DPS_Calc
             float raidDPS = bossHP / enrage;
 
             //subtract estimated tank contribution
-            raidDPS -= tankDPS;
+            raidDPS -= (float)tankDPS;
 
             //divide the remaining health pool/second by the number of DPS players and return
             necessaryDPS = raidDPS / numDPS;
